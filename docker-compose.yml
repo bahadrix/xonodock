@@ -1,6 +1,9 @@
 version: '2'
 services:
-  xonotic-server:
+  xonodock:
     build: .
-    #volume: ./data:/
-    command: /bin/bash pwd
+    ports:
+            - "0.0.0.0:26000:26000/udp"
+            - "0.0.0.0:26000:26000/tcp"
+    volumes:
+     - ./data:/root/.xonotic/data
