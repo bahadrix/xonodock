@@ -1,0 +1,6 @@
+version: '2'
+services:
+  xonotic-server:
+    build: .
+    #volume: ./data:/
+    command: /bin/bash pwd
