@@ -9,5 +9,6 @@ WORKDIR /opt
 RUN wget http://dl.xonotic.org/xonotic-${XONOTICVERSION}.zip
 RUN unzip xonotic-${XONOTICVERSION}.zip
 RUN rm -rf xonotic-${XONOTICVERSION}.zip
+VOLUME /root/.xonotic/data
 ENTRYPOINT /bin/bash /opt/Xonotic/xonotic-linux-dedicated.sh
 #RUN /bin/bash server_linux.sh
